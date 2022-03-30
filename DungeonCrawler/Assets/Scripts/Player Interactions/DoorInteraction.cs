@@ -9,6 +9,9 @@ public class DoorInteraction : MonoBehaviour
     public TextMeshProUGUI texts;
     public Transform door;
     public string level;
+    private void Start() {
+        StartCoroutine(Text());
+    }
     void Update()
     {
         if (Vector3.Distance(transform.position, door.position) < 10)
@@ -21,5 +24,10 @@ public class DoorInteraction : MonoBehaviour
         } else {
             texts.text = "";
         }
+    }
+
+    IEnumerator Text() {
+        yield return new WaitForSeconds(2);
+        texts.text = "";
     }
 }
