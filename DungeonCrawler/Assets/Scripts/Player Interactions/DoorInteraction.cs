@@ -10,10 +10,14 @@ public class DoorInteraction : MonoBehaviour
     public Transform door;
     public string level;
     private void Start() {
-        StartCoroutine(Text());
+        if (SceneManager.GetActiveScene().name != "Intro") {
+            texts.text = "";
+        } else {
+            StartCoroutine(Text());
+        }
     }
     void Update()
-    {
+    {   
         if (Vector3.Distance(transform.position, door.position) < 10)
         {
             texts.text = "Press E to Enter";

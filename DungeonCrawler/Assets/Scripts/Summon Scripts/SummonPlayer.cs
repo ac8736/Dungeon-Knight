@@ -6,6 +6,7 @@ public class SummonPlayer : MonoBehaviour
 {
     public GameObject summonImage;
     public GameObject player;
+    public float floatUntil = -160f;
     void Start()
     {
         player.SetActive(false);
@@ -13,7 +14,7 @@ public class SummonPlayer : MonoBehaviour
     private void FixedUpdate() {
         transform.position += new Vector3(0, .1f, 0);
         summonImage.transform.Rotate(0, 0, -1);
-        if (transform.position.y > -160)
+        if (transform.position.y > floatUntil)
         {
             StartCoroutine(summonPlayer());
         }

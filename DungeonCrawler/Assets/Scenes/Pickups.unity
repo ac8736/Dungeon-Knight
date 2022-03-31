@@ -1218,7 +1218,7 @@ PrefabInstance:
       objectReference: {fileID: 138079649}
     - target: {fileID: 5254688949262293638, guid: 123e9a2b285dce44ea43b11e2098201d, type: 3}
       propertyPath: level
-      value: Level1
+      value: EnemyTut
       objectReference: {fileID: 0}
     - target: {fileID: 5254688949262293638, guid: 123e9a2b285dce44ea43b11e2098201d, type: 3}
       propertyPath: texts
