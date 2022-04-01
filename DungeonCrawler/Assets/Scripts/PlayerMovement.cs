@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     Camera mainCam;
     [HideInInspector] public bool canMove = true;
     public Animator _animator;
-    //Vector3 pointPlace;
     void Start()
     {
         _navAgent = GetComponent<NavMeshAgent>();
@@ -19,12 +18,11 @@ public class PlayerMovement : MonoBehaviour
         _animator.SetFloat("walk", _navAgent.velocity.magnitude);
         if (canMove) {
             if (Input.GetMouseButtonDown(1)) {
+                _animator.SetBool("Attack", false);
                 RaycastHit hit;
-                if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 200)) {
-                    if (hit.collider.tag != "Enemy") {
+                if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 200)) 
+                    if (hit.collider.tag != "Enemy") 
                         _navAgent.destination = hit.point;
-                    }
-                }
             }
         }
     }

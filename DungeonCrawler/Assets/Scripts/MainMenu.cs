@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public void QuitGame() {
-        SceneManager.LoadScene("End"); 
+        Application.Quit();
     }
 
     public void PlayGame() {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Intro");
     }
 }

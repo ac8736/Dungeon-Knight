@@ -11,7 +11,6 @@ public class PlayerAttack : MonoBehaviour
     public float range = 1f;
     private float distance;
     private GameObject enemy;
-    [HideInInspector] public bool isAttacking = false;
     void Start()
     {
         _navAgent = GetComponent<NavMeshAgent>();
@@ -29,13 +28,11 @@ public class PlayerAttack : MonoBehaviour
             }
         }
     }
-
     IEnumerator initiateAttack(GameObject enemy) {
         while (true) {
             yield return new WaitForSeconds(0.2f);
             _navAgent.destination = enemy.transform.position;
             if (Vector3.Distance(transform.position, enemy.transform.position) < range) {
-                print(Vector3.Distance(transform.position, enemy.transform.position));
                 _animator.SetBool("Attack", true);
                 _navAgent.destination = transform.position;
                 yield return new WaitForSeconds(0.2f);

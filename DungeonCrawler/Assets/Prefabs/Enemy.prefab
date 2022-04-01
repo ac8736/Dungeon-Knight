@@ -899,10 +899,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3231991045923759060}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.5655203, z: 1}
+  m_Size: {x: 2.0236707, y: 2.5655203, z: 1.7835367}
   m_Center: {x: 0, y: 1.2725139, z: 0}
 --- !u!114 &2420069267449072560
 MonoBehaviour:
@@ -918,7 +918,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 3231991045916332138}
   gotHit: 0
+  player: {fileID: 0}
   attackRange: 20
+  followPlayer: 1
 --- !u!114 &3535799527771040696
 MonoBehaviour:
   m_ObjectHideFlags: 0

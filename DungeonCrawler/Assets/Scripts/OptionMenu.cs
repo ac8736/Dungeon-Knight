@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class OptionMenu : MonoBehaviour
 {
-    public string nextLevel;
+    public string nextLevel = "Intro";
     public void PlayGame() {
         SceneManager.LoadScene(nextLevel); 
     }

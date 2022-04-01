@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class DoorInteraction : MonoBehaviour
 {
     public TextMeshProUGUI texts;
+    public int enemyCount;
     public Transform door;
     public string level;
     private void Start() {
@@ -20,10 +21,17 @@ public class DoorInteraction : MonoBehaviour
     {   
         if (Vector3.Distance(transform.position, door.position) < 10)
         {
-            texts.text = "Press E to Enter";
-            if (Input.GetKeyDown(KeyCode.E))
+            if (enemyCount > 0)
             {
-                SceneManager.LoadScene(level);
+                texts.text = "You have to kill all the enemies first";
+            }
+            else
+            {
+                texts.text = "Press E to Enter";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    SceneManager.LoadScene(level);
+                }
             }
         } else {
             texts.text = "";

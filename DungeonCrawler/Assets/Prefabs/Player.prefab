@@ -87,8 +87,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5254688949087460100}
-  m_LocalRotation: {x: -0.0000000033161611, y: -0.000000060236644, z: 0.099833444,
-    w: 0.9950042}
+  m_LocalRotation: {x: -0.0000000033161611, y: -0.000000060236644, z: 0.099833444, w: 0.9950042}
   m_LocalPosition: {x: -0.2977878, y: -0.000000012111664, z: 0}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -867,7 +866,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.39
   m_Speed: 12
-  m_Acceleration: 30
+  m_Acceleration: 200
   avoidancePriority: 50
   m_AngularSpeed: 400
   m_StoppingDistance: 0
@@ -891,6 +890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texts: {fileID: 0}
+  enemyCount: 0
   door: {fileID: 0}
   level: Pickups
 --- !u!136 &888670900043684619
@@ -921,7 +921,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 5254688949080041674}
   range: 5
-  isAttacking: 0
 --- !u!1 &5254688949087460218
 GameObject:
   m_ObjectHideFlags: 0
