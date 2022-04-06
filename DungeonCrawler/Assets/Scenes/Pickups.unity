@@ -2811,7 +2811,7 @@ MonoBehaviour:
   player: {fileID: 1190484350}
   xOffset: 0
   yOffset: 30
-  zOffset: -5
+  zOffset: -2.5
 --- !u!1001 &1407125874
 PrefabInstance:
   m_ObjectHideFlags: 0

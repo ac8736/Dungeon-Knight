@@ -9,7 +9,6 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public bool gotHit = false;
     public GameObject player;
     NavMeshAgent _agent;
-    bool isAttacking = false;
     public float attackRange = 20f;
     public bool followPlayer = true;
     bool dmgPlayer = false;
@@ -27,7 +26,6 @@ public class EnemyController : MonoBehaviour
             Destroy(this.gameObject);
         }
         if (Vector3.Distance(transform.position, player.transform.position) < attackRange) {
-            isAttacking = true;
             if (followPlayer)
                 StartCoroutine(Attack());
         } else {
@@ -45,13 +43,18 @@ public class EnemyController : MonoBehaviour
         dmgPlayer = false;
     }
     IEnumerator AttackAnim() {
-        _agent.destination = transform.position;
-        _animator.SetBool("attack", true);
-        yield return new WaitForSeconds(0.2f);
-        _animator.SetBool("attack", false);
-        if (dmgPlayer)
-            player.GetComponent<PlayerHealth>().TakeDamage(10);
-        yield return new WaitForSeconds(0.2f);
+        while (dmgPlayer) {
+            _agent.destination = transform.position;
+            _animator.SetBool("attack", true);
+            yield return new WaitForSeconds(0.2f);
+            _animator.SetBool("attack", false);
+            yield return new WaitForSeconds(0.05f);
+           // print(Vector3.Distance(transform.position, player.transform.position));
+            if (Vector3.Distance(transform.position, player.transform.position) < 4.2f) {
+                player.GetComponent<PlayerHealth>().TakeDamage(10);
+            }
+            yield return new WaitForSeconds(0.5f);
+        }
         StartCoroutine(Attack());
     }
     IEnumerator Attack() {

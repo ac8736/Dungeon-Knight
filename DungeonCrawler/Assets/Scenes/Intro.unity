@@ -9387,9 +9387,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1537374939054249248, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
+    - target: {fileID: 13625654758622250, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13625654758622250, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1537374939383020821, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}
       propertyPath: m_Pivot.x
