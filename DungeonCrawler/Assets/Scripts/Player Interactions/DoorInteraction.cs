@@ -11,11 +11,7 @@ public class DoorInteraction : MonoBehaviour
     public Transform door;
     public string level;
     private void Start() {
-        if (SceneManager.GetActiveScene().name != "Intro") {
-            texts.text = "";
-        } else {
-            StartCoroutine(Text());
-        }
+        StartCoroutine(Text());
     }
     void Update()
     {   

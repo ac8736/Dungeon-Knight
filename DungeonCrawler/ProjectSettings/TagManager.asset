@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - NPC
+  - pot
+  - Potions
+  - Music
   layers:
   - Default
   - TransparentFX

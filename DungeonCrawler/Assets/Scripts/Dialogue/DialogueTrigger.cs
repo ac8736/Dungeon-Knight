@@ -26,7 +26,7 @@ public class DialogueTrigger : MonoBehaviour
         if (inDialogue) {
             if (Input.GetKeyDown(KeyCode.E)) {
                 FindObjectOfType<IntroDialogue>().DisplayNextSentence();
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetTrigger("Stop");
+     //           GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetTrigger("Stop");
             }
         }
     }

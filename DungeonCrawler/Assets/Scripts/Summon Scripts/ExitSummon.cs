@@ -6,14 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class ExitSummon : MonoBehaviour
 {
+    public int key = 1;
     public GameObject summonImage;
     public string levelToLoad;
     public Animator _animator;
     public GameObject player;
     private void OnTriggerEnter(Collider other) {
-        player.GetComponent<PlayerMovement>().canMove = false;
-        player.GetComponent<NavMeshAgent>().destination = transform.position;
-        StartCoroutine(teleportPlayer());
+        if (other.CompareTag("Player") && key == 1) {
+            player.GetComponent<PlayerMovement>().canMove = false;
+            player.GetComponent<NavMeshAgent>().destination = transform.position;
+            StartCoroutine(teleportPlayer());
+        }
     }
     IEnumerator teleportPlayer() {
         yield return new WaitForSeconds(1f);

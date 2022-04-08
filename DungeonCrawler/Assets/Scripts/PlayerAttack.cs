@@ -11,10 +11,13 @@ public class PlayerAttack : MonoBehaviour
     public float range = 1f;
     private float distance;
     private GameObject enemy;
+    public AudioClip attackSound;
+    AudioSource audioSource;
     void Start()
     {
         _navAgent = GetComponent<NavMeshAgent>();
         mainCam = Camera.main;
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -27,6 +30,9 @@ public class PlayerAttack : MonoBehaviour
                 }
             }
         }
+        if (Input.GetMouseButtonDown(1)) {
+            StopAllCoroutines();
+        }
     }
     IEnumerator initiateAttack(GameObject enemy) {
         while (true) {
@@ -34,10 +40,10 @@ public class PlayerAttack : MonoBehaviour
             _navAgent.destination = enemy.transform.position;
             if (Vector3.Distance(transform.position, enemy.transform.position) < range) {
                 _animator.SetBool("Attack", true);
+                audioSource.PlayOneShot(attackSound, 0.2f);
                 _navAgent.destination = transform.position;
                 yield return new WaitForSeconds(0.2f);
                 _animator.SetBool("Attack", false);
-                yield return new WaitForSeconds(0.2f);
                 enemy.GetComponent<EnemyController>().gotHit = true;
                 StopAllCoroutines();
             }
