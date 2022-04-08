@@ -9,9 +9,12 @@ public class PlayerMovement : MonoBehaviour
     Camera mainCam;
     [HideInInspector] public bool canMove = true;
     public Animator _animator;
+    AudioSource _audioSource;
+    public AudioClip hp;
     void Start()
     {
         _navAgent = GetComponent<NavMeshAgent>();
+        _audioSource = GetComponent<AudioSource>();
         mainCam = Camera.main;
     }
     void Update() {
@@ -24,6 +27,12 @@ public class PlayerMovement : MonoBehaviour
                     if (hit.collider.tag != "Enemy") 
                         _navAgent.destination = hit.point;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.CompareTag("Potions")){
+            _audioSource.PlayOneShot(hp);
         }
     }
 }
