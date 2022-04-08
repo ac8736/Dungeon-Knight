@@ -1398,23 +1398,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1167431060608788003, guid: 526f32922a471b446bdfd84c5baeece6, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: Alongside puzzles, you will encounter these skeletons. You can avoid
-        them, but if you get too close, they will hunt you down.
+      value: You will encounter skeletons throughout. You can avoid them, but if
+        you get too close, they will hunt you down.
       objectReference: {fileID: 0}
     - target: {fileID: 1167431060608788003, guid: 526f32922a471b446bdfd84c5baeece6, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: By hovering over them, your cursor will change into a sword, signalling
+      value: By hovering over them, your cursor will change into a sword, signaling
         you can attack your target.
       objectReference: {fileID: 0}
     - target: {fileID: 1167431060608788003, guid: 526f32922a471b446bdfd84c5baeece6, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: 'Left Click to damage the skeleton, and when enough damage is dealt,
-        they will die. '
+      value: Left Click to destroy the skeleton.
       objectReference: {fileID: 0}
     - target: {fileID: 1167431060608788003, guid: 526f32922a471b446bdfd84c5baeece6, type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: When you've learned how to defeat these foes, go to the summoning circle
-        to tackle your first challenge!
+      value: When you're ready, go to the summoning circle.
       objectReference: {fileID: 0}
     - target: {fileID: 1167431060608788003, guid: 526f32922a471b446bdfd84c5baeece6, type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
@@ -7279,6 +7277,22 @@ PrefabInstance:
     - target: {fileID: 1537374939383020825, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537374939413265588, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537374939413265588, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537374940532026540, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537374940532026540, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 86
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}

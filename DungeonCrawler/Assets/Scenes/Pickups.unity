@@ -3642,7 +3642,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1167431060608788003, guid: 526f32922a471b446bdfd84c5baeece6, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: To collect the potion, walk over it.
+      value: To collect the potion, walk over it. However, you can only hold 5 at
+        a time.
       objectReference: {fileID: 0}
     - target: {fileID: 1167431060608788003, guid: 526f32922a471b446bdfd84c5baeece6, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
@@ -3765,7 +3766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1537374939383020821, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1537374939383020821, guid: a0dcd2e4b311fec46bbf45c8ecf55037, type: 3}
       propertyPath: m_AnchorMax.x

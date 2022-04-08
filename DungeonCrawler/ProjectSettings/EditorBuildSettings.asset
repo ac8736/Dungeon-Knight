@@ -18,14 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/EnemyTut.unity
     guid: 2d0c920a55d66694fb667d5859203361
   - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 3cd09d7f74db649448a40de9ebdadac2
+  - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: 3e64fbb41dd7b48448cb0851006d991d
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: 7742dc600273e40049747bbaadb9e159
-  - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: 3cd09d7f74db649448a40de9ebdadac2
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: b47288bb5e8b5414dbb61139c627f318
