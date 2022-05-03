@@ -325,6 +325,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 691697669}
+    - target: {fileID: 1219450318, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219450318, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: Remember, you can always retreat by pressing ESC.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219450318, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: Are you ready?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219450318, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: Go through the main door to begin your adventure!
+      objectReference: {fileID: 0}
     - target: {fileID: 1219450319, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: player
       value: 
